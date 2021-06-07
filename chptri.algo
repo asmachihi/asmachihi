@@ -1,0 +1,16 @@
+ALGORITHM  sorting algorithm
+VAR
+    arr : ARRAY_OF INTEGER[N];
+    n,i,j,elem : INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        elem := arr[i];
+        j := i-1;
+      WHILE ( j >= 0  &&  arr[j] > elem) DO
+          arr[j+1] := arr[j];
+          j := j-1;
+      END_WHILE
+      arr[j+1] := elem;
+    END_FOR
+   
+END
